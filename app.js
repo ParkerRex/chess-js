@@ -75,6 +75,7 @@ const createBoard = () => {
     const square = document.createElement("div");
     square.classList.add("square");
     square.innerHTML = startPiece;
+    square.firstChild?.setAttribute('draggable', true)
     square.setAttribute("square-id", i);
 
     const row = Math.floor((63 - i) / 8) + 1;
@@ -96,3 +97,6 @@ const createBoard = () => {
 };
 
 createBoard();
+
+
+
